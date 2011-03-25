@@ -18,7 +18,7 @@ Consider the following model
         slug = models.SlugField(max_length=255, unique=True)
 
         class Meta:
-	    translate = ('name', 'slug')
+            translate = ('name', 'slug')
 
 With the following admin model
 
@@ -55,7 +55,7 @@ to
 
     class ProductAdmin(admin.ModelAdmin):
         prepopulated_fields = {"slug_es": ("name_es",),
-	                       "slug_sv": ("name_sv",)}
+                               "slug_sv": ("name_sv",)}
 
 You can combine this with normal -- untranslated --
 `prepopulated_fields`. The following
@@ -69,8 +69,8 @@ is equivalent to
 
     class ProductAdmin(admin.ModelAdmin):
         prepopulated_fields = {"author_slug": ("author",),
-  	                       "slug_es": ("name_es",),
-	                       "slug_sv": ("name_sv",)}
+                               "slug_es": ("name_es",),
+                               "slug_sv": ("name_sv",)}
 
 Limitations
 ===========
