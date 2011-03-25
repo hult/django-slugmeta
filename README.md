@@ -30,8 +30,8 @@ This will fail.
 
     'ProductAdmin.prepopulated_fields' refers to field 'slug' that is missing from model 'Product'
 
-Quite naturally, transmeta helpfully created `slug_$LANG` for each
-specified language for us, and removed the `slug` field.
+Quite naturally; after all transmeta helpfully created `slug_$LANG`
+for each specified language for us, and removed the `slug` field.
 
 Enter slugmeta
 ==============
